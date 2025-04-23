@@ -6,4 +6,4 @@ This project aims to solve Rosalind's problems and package them in a command-lin
 
 [marcel.ferreira@unesp.br](mailto:marcel.ferreira@unesp.br)
 
-marceelrf
+![github](https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg)[marceelrf](https://github.com/marceelrf)
