@@ -16,7 +16,10 @@ rosalind-cli/
 │       └── ...         
 └── README.md
 
+## Problems solved
 
+- [DNA](https://rosalind.info/problems/dna/);
+- [RNA](https://rosalind.info/problems/rna/);
 
 ### Get in touch
 
