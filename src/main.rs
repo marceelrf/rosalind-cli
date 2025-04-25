@@ -10,8 +10,10 @@ mod problems;  // Importa o módulo problems/
     about = "🔬 Rosalind troubleshooting tool (Bioinformatics)",
     long_about = r#"
     Examples:
-      rosalind dna --sequence "AGCTTTTCATT"
-      rosalind rna --sequence "GATGGAACTTGACTACGTAA"
+      rosalind-cli dna --sequence "AGCTTTTCATT"
+      rosalind-cli rna --sequence "GATGGAACTTGACTACGTAA"
+
+    https://github.com/marceelrf/rosalind-cli
     "#,
     arg_required_else_help = true,  // Exibe ajuda se nenhum argumento for passado
 )]
@@ -25,13 +27,14 @@ enum Problem {
     /// Solve the problem ‘Counting DNA Nucleotides’ (DNA)
     #[command(arg_required_else_help = true)]
     DNA {
-        /// Sequência de DNA de entrada
+        /// DNA sequence <string>
         #[arg(short, long)]
         dna: String,
     },
     /// Transcribes DNA into RNA (RNA problem)
     #[command(arg_required_else_help = true)]
     RNA {
+        /// DNA sequence <string>
         #[arg(short, long)]
         dna: String,
     }
