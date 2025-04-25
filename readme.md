@@ -4,10 +4,10 @@ This project aims to solve Rosalind's problems and package them in a command-lin
 
 ## Repo structure
 
-rosalind-cli/
-├── Cargo.toml          
-├── src/
-│   ├── main.rs         
+rosalind-cli/  
+├── Cargo.toml           
+├── src/  
+│   ├── main.rs           
 │   ├── lib.rs          
 │   └── problems/       
 │       ├── mod.rs      
