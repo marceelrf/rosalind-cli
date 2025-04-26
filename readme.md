@@ -11,8 +11,11 @@ rosalind-cli/
 │   ├── lib.rs          
 │   └── problems/       
 │       ├── mod.rs      
-│       ├── prob1.rs     
-│       ├── prob2.rs     
+│       ├── prob1/
+|       |    ├── mod.rs
+|       |    ├── args.rs
+|       |    ├── solve.rs    
+│       ├── prob2/     
 │       └── ...         
 └── README.md
 
