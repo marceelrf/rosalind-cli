@@ -1,25 +1,13 @@
-pub mod args;
-pub mod solve;
+pub mod dna;
+pub mod rna; 
+// Adicione novos problemas aqui no futuro
 
-use clap::Args;
-use clap::ArgGroup;
-use super::super::ProblemCommands;
+use clap::Subcommand;
 
-/// Configuração do comando DNA
-#[derive(Args)]
-#[command(group(
-    ArgGroup::new("input")
-        .required(true)
-        .args(&["sequence", "seqfile", "writefile"]),
-))]
-#[derive(Args)]
-pub struct DnaCommand {
-    #[command(flatten)]
-    pub args: crate::problems::dna::args::DnaArgs,
-}
-
-impl From<DnaCommand> for ProblemCommands {
-    fn from(cmd: DnaCommand) -> Self {
-        ProblemCommands::Dna(cmd)
-    }
+/// Enum de todos os problemas disponíveis
+#[derive(Subcommand)]
+pub enum ProblemCommands {
+    Dna(dna::DnaCommand),
+    // Rna(rna::RnaCommand),
+    // Outros problemas futuros
 }
