@@ -5,7 +5,7 @@ use std::fs;
 /// Conta e imprime nucleotídeos com cores no estilo IGV
 pub fn solve(args: &DnaArgs) {
     // Ler a sequência (do argumento ou arquivo)
-    let dna: String = if let Some(seq) = &args.dna {
+    let dna: String = if let Some(seq) = &args.sequence {
         seq.to_string()
     } else if let Some(file) = &args.seqfile {
         fs::read_to_string(file).unwrap_or_else(|_| {

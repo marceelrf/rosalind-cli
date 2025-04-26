@@ -7,8 +7,7 @@ use clap::Subcommand;
 /// Enum de todos os problemas disponíveis
 #[derive(Subcommand)]
 pub enum ProblemCommands {
-    #[command(subcommand)]
-    Dna(dna::DnaCommand),
+    Dna(crate::problems::dna::DnaCommand),
     
     // Padrão repetido para outros problemas:
     // Rna(rna::RnaCommand),
