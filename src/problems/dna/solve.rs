@@ -1,28 +1,6 @@
+use super::args::DnaArgs;
 use colored::*;
 use std::fs;
-use std::path::PathBuf;
-use clap::{ArgGroup, Parser};
-
-/// Argumentos para o problema DNA
-#[derive(Parser)]
-#[command(group(
-    ArgGroup::new("input")
-        .required(true)
-        .args(&["sequence", "seqfile"]),
-))]
-pub struct DnaArgs {
-    /// DNA sequence (ex: "AGCTTTTCATT")
-    #[arg(short, long, conflicts_with = "seqfile")]
-    pub dna: Option<String>,
-
-    /// DNA sequence txt file
-    #[arg(short, long, value_name = "FILE")]
-    pub seqfile: Option<PathBuf>,
-
-    /// Write the count in a txt file (format: "A C G T")
-    #[arg(short, long, value_name = "FILE")]
-    pub writefile: Option<PathBuf>,
-}
 
 /// Conta e imprime nucleotídeos com cores no estilo IGV
 pub fn solve(args: &DnaArgs) {
