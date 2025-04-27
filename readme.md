@@ -4,6 +4,7 @@ This project aims to solve Rosalind's problems and package them in a command-lin
 
 ## Repo structure
 
+```
 rosalind-cli/  
 ├── Cargo.toml           
 ├── scripts/  
@@ -19,6 +20,7 @@ rosalind-cli/
 │       ├── prob2/     
 │       └── ...         
 └── README.md
+```
 
 ## Structure of problem solving
 
