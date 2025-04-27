@@ -12,7 +12,7 @@ rosalind-cli/
 │   ├── lib.rs          
 │   └── problems/       
 │       ├── mod.rs      
-│       ├── prob1/
+│       ├── prob1/  
 |       |    ├── mod.rs  
 |       |    ├── args.rs  
 |       |    ├── solve.rs    
