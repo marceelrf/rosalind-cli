@@ -1,7 +1,7 @@
 use clap::Args;
 use std::path::PathBuf;
 
-/// Argumentos para o problema DNA
+/// Args to DNA problem
 #[derive(Debug, Args)]
 #[clap(group(
     clap::ArgGroup::new("input")
