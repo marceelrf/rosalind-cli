@@ -42,10 +42,12 @@ Usage:
 
 Result:
 
-`src/problems/PROB/`  
-`├── args.rs`  
-`├── mod.rs`  
-`└── solve.rs`
+```
+src/problems/PROB/  
+├── args.rs  
+├── mod.rs   
+└── solve.rs  
+```
 
 ## Problems solved
 
