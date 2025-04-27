@@ -6,6 +6,7 @@ This project aims to solve Rosalind's problems and package them in a command-lin
 
 rosalind-cli/  
 ├── Cargo.toml           
+├── scripts/  
 ├── src/  
 │   ├── main.rs           
 │   ├── lib.rs          
@@ -19,12 +20,38 @@ rosalind-cli/
 │       └── ...         
 └── README.md
 
+## Structure of problem solving
+
+- `solve.rs`: It contains the code to solve the problems.
+
+- `mod.rs`: It connects the args and solve modules to the problem folder, organizing internal references and making them accessible to the parent module.
+
+- `args.rs`: It defines the command-line arguments specific to the problem, usually using `clap` to parse and validate user inputs.
+
+### Automatic problem structure generator
+
+To make it easier to create new problems while maintaining the project's structure, the `add_problems.rs` script was designed. It checks the name of the problem to be created and automatically creates the (blank) files in the folder with the name of the problem.
+
+Usage:
+
+`rustc scripts/add_problem.rs -o add_problem #check the path!`
+
+`./add_problem PROB`
+
+Result:
+
+`src/problems/PROB/`
+`├── args.rs`
+`├── mod.rs`
+`└── solve.rs``
+
 ## Problems solved
 
 - [DNA](https://rosalind.info/problems/dna/);
 - [RNA](https://rosalind.info/problems/rna/);
 
-### Get in touch
+
+## Get in touch
 
 <div align = "center">
 <a href = "mailto:marcel.ferreira@unesp.br"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" title="Gmail" alt="Gmail" width="45" height="40"/></a>&nbsp;
