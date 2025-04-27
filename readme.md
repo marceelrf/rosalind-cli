@@ -12,8 +12,8 @@ rosalind-cli/
 │   └── problems/       
 │       ├── mod.rs      
 │       ├── prob1/
-|       |    ├── mod.rs
-|       |    ├── args.rs
+|       |    ├── mod.rs  
+|       |    ├── args.rs  
 |       |    ├── solve.rs    
 │       ├── prob2/     
 │       └── ...         

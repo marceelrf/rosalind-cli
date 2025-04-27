@@ -1,6 +1,4 @@
-use clap::Parser;
-use problems::ProblemCommands;
-///use crate::problems::dna::solve::solve;
+use clap::{Parser, Subcommand};
 
 mod problems;
 
@@ -20,15 +18,26 @@ mod problems;
     arg_required_else_help = true,  // Exibe ajuda se nenhum argumento for passado
 )]
 struct Cli {
-    #[command(subcommand)]
-    command: ProblemCommands,
+    #[clap(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    /// Solve the DNA problem
+    Dna(problems::dna::args::DnaArgs),
+
+    // Aqui depois você pode adicionar mais problemas:
+    // Prob2(problems::prob2::args::Prob2Args),
 }
 
 fn main() {
     let cli = Cli::parse();
     
     match cli.command {
-        ProblemCommands::Dna(cmd) => problems::dna::solve(&cmd.args),
+        Commands::Dna(args) => {
+            problems::dna::solve::solve(&args);
+        }
         // ProblemCommands::Rna(cmd) => problems::rna::solve(&cmd.args),
     }
 }
