@@ -13,9 +13,9 @@ rosalind-cli/
 │   └── problems/       
 │       ├── mod.rs      
 │       ├── prob1/  
-|       |    ├── mod.rs  
-|       |    ├── args.rs  
-|       |    ├── solve.rs    
+|           ├── mod.rs  
+|           ├── args.rs  
+|           ├── solve.rs    
 │       ├── prob2/     
 │       └── ...         
 └── README.md
