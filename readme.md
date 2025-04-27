@@ -43,7 +43,7 @@ Result:
 `src/problems/PROB/`
 `├── args.rs`
 `├── mod.rs`
-`└── solve.rs``
+`└── solve.rs`
 
 ## Problems solved
 
