@@ -51,9 +51,9 @@ src/problems/PROB/
 
 ## Problems solved
 
-- [DNA](https://rosalind.info/problems/dna/);
-- [RNA](https://rosalind.info/problems/rna/);
-- [REVC](https://rosalind.info/problems/revc/);
+- [DNA](https://rosalind.info/problems/dna/)
+- [RNA](https://rosalind.info/problems/rna/)
+- [REVC](https://rosalind.info/problems/revc/)
 
 ## Get in touch
 
