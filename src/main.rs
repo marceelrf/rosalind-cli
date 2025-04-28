@@ -25,9 +25,11 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     /// Solve the DNA problem.
-    Dna(problems::dna::args::DnaArgs),
+    DNA(problems::dna::args::DnaArgs),
     /// Solve the RNA problem.
-    RNA(problems::rna::args::RnaArgs)
+    RNA(problems::rna::args::RnaArgs),
+    /// Sove the REVC problem.
+    REVC(problems::revc::args::RevcArgs)
 
     // Aqui depois você pode adicionar mais problemas:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -37,12 +39,15 @@ fn main() {
     let cli = Cli::parse();
     
     match cli.command {
-        Commands::Dna(args) => {
+        Commands::DNA(args) => {
             problems::dna::solve::solve(&args);
         },
         Commands::RNA(args) => {
             problems::rna::solve::solve(&args);
-        } 
+        },
+        Commands::REVC(args) => {
+            problems::revc::solve::solve(&args);
+        }
         // Next commands
     }
 }
