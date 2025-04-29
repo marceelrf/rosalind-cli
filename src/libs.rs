@@ -1,1 +1,2 @@
-pub mod problems;  // Exporta o módulo problems
+pub mod problems;
+pub mod utils;

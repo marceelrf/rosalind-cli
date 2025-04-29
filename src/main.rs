@@ -1,6 +1,7 @@
 use clap::{Parser, Subcommand};
 
 mod problems;
+pub mod utils;
 
 #[derive(Parser)]
 #[command(
@@ -29,7 +30,9 @@ enum Commands {
     /// Solve the RNA problem.
     RNA(problems::rna::args::RnaArgs),
     /// Sove the REVC problem.
-    REVC(problems::revc::args::RevcArgs)
+    REVC(problems::revc::args::RevcArgs),
+    /// Sove the GC problem.
+    GC(problems::gc::args::GcArgs)
 
     // Aqui depois você pode adicionar mais problemas:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -47,6 +50,9 @@ fn main() {
         },
         Commands::REVC(args) => {
             problems::revc::solve::solve(&args);
+        },
+        Commands::GC(args) => {
+            problems::gc::solve::solve(&args);
         }
         // Next commands
     }
