@@ -32,7 +32,9 @@ enum Commands {
     /// Sove the REVC problem.
     REVC(problems::revc::args::RevcArgs),
     /// Sove the GC problem.
-    GC(problems::gc::args::GcArgs)
+    GC(problems::gc::args::GcArgs),
+    /// Sove the PROT problem.
+    PROT(problems::prot::args::ProtArgs)
 
     // Aqui depois você pode adicionar mais problemas:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -53,6 +55,9 @@ fn main() {
         },
         Commands::GC(args) => {
             problems::gc::solve::solve(&args);
+        },
+        Commands::PROT(args) => {
+            problems::prot::solve::solve(&args);
         }
         // Next commands
     }

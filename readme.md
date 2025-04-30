@@ -55,6 +55,7 @@ src/problems/PROB/
 - [RNA](https://rosalind.info/problems/rna/)
 - [REVC](https://rosalind.info/problems/revc/)
 - [GC](https://rosalind.info/problems/gc/)
+- [PROT](https://rosalind.info/problems/prot/)
 
 ## Get in touch
 

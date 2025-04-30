@@ -1,3 +1,4 @@
+use colored::*;
 use std::collections::HashMap;
 
 /// Returns a HashMap with the standard genetic code (RNA → aminoacid)
@@ -43,3 +44,43 @@ pub fn dna_codons() -> HashMap<&'static str, &'static str> {
         ("GGT", "G"), ("GGC", "G"), ("GGA", "G"), ("GGG", "G"),
     ])
 }
+/// Translates a DNA sequence into an amino acid chain
+pub fn translate(seq: &str, codon_table: &HashMap<&str, &str>) -> String {
+    let mut protein = String::new();
+
+    for codon in seq
+        .as_bytes()
+        .chunks(3)
+        .map(|chunk| std::str::from_utf8(chunk).unwrap_or("")) 
+        .filter(|c| c.len() == 3)
+    {
+        match codon_table.get(codon) {
+            Some(&aa) if aa != "*" => protein.push_str(aa),
+            Some(_) => break, // If found a stop codon
+            None => continue, // invalid/incomplete codon
+        }
+    }
+
+    protein
+}
+
+/// Prints the protein sequence with coloring based on the polarity of the side chain
+pub fn print_colored_protein(protein: &str) {
+    for aa in protein.chars() {
+        let colored_aa = match aa {
+            // Non-polar
+            'A' | 'V' | 'L' | 'I' | 'M' | 'F' | 'W' | 'P' | 'G' => aa.to_string().yellow(),
+            // Polars without charge
+            'S' | 'T' | 'C' | 'Y' | 'N' | 'Q' => aa.to_string().blue(),
+            // Positively charged polar
+            'K' | 'R' | 'H' => aa.to_string().green(),
+            // Negatively charged polar
+            'D' | 'E' => aa.to_string().red(),
+            // Other (or stop)
+            _ => aa.to_string().white(),
+        };
+        print!("{}", colored_aa);
+    }
+    println!();
+}
+
