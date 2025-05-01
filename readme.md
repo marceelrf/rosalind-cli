@@ -56,6 +56,7 @@ src/problems/PROB/
 - [REVC](https://rosalind.info/problems/revc/)
 - [GC](https://rosalind.info/problems/gc/)
 - [PROT](https://rosalind.info/problems/prot/)
+- [SUBS](https://rosalind.info/problems/subs/)
 
 ## Get in touch
 
