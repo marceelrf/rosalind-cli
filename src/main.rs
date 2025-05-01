@@ -26,17 +26,17 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    /// Solve the DNA problem.
+    /// Counting DNA Nucleotides
     DNA(problems::dna::args::DnaArgs),
-    /// Solve the RNA problem.
+    /// Transcribing DNA into RNA
     RNA(problems::rna::args::RnaArgs),
-    /// Sove the REVC problem.
+    /// Complementing a Strand of DNA
     REVC(problems::revc::args::RevcArgs),
-    /// Sove the GC problem.
+    /// Computing GC Content
     GC(problems::gc::args::GcArgs),
-    /// Sove the PROT problem.
+    /// Translating RNA into Protein
     PROT(problems::prot::args::ProtArgs),
-    /// Sove the SUBS problem.
+    /// Finding a Motif in DNA
     SUBS(problems::subs::args::SubsArgs),
     /// Counting Point Mutations
     HAMM(problems::hamm::args::HammArgs),
