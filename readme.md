@@ -1,6 +1,6 @@
 # About
 
-This project aims to solve Rosalind's problems and package them in a command-line interface (CLI) format.
+This project aims to solve [Rosalind's](https://rosalind.info/about/) problems and package them in a command-line interface (CLI) format.
 
 ## Repo structure
 
