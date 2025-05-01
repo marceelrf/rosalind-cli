@@ -103,3 +103,18 @@ pub fn find_substring_matches(sequence: &str, pattern: &str) -> Vec<usize> {
 
     positions
 }
+/// Compute the hamming distance
+pub fn hamming_distance(seq1: &str, seq2: &str) -> Result<usize, &'static str> {
+    
+    if seq1.len() != seq2.len() {
+        return Err("Sequence must have the same length.")
+    }
+
+    let dist = seq1.chars()
+    .zip(seq2.chars())
+    .filter(|(a, b)| a != b)
+    .count();
+
+    Ok(dist)
+
+}

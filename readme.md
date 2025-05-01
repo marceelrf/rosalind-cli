@@ -57,6 +57,7 @@ src/problems/PROB/
 - [GC](https://rosalind.info/problems/gc/)
 - [PROT](https://rosalind.info/problems/prot/)
 - [SUBS](https://rosalind.info/problems/subs/)
+- [HAMM](https://rosalind.info/problems/hamm/)
 
 ## Get in touch
 

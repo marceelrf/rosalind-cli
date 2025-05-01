@@ -36,10 +36,12 @@ enum Commands {
     GC(problems::gc::args::GcArgs),
     /// Sove the PROT problem.
     PROT(problems::prot::args::ProtArgs),
-    /// Sove the Subs problem.
-    SUBS(problems::subs::args::SubsArgs)
+    /// Sove the SUBS problem.
+    SUBS(problems::subs::args::SubsArgs),
+    /// Counting Point Mutations
+    HAMM(problems::hamm::args::HammArgs),
 
-    // Aqui depois você pode adicionar mais problemas:
+    // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
 }
 
@@ -64,6 +66,9 @@ fn main() {
         },
         Commands::SUBS(args) => {
             problems::subs::solve::solve(&args);
+        },
+        Commands::HAMM(args) => {
+            problems::hamm::solve::solve(&args);
         }
         // Next commands
     }

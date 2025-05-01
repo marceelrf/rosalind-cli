@@ -10,7 +10,7 @@ use std::path::PathBuf;
 ))]
 pub struct SubsArgs {
 
-    /// Path to FASTA file
+    /// Path to DNA sequence file
     #[clap(short = 'f', long)]
     pub readfile: PathBuf,
 
