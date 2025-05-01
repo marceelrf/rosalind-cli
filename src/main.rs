@@ -1,5 +1,6 @@
 use clap::{Parser, Subcommand};
 
+
 mod problems;
 pub mod utils;
 
@@ -16,7 +17,7 @@ pub mod utils;
 
     https://github.com/marceelrf/rosalind-cli
     "#,
-    arg_required_else_help = true,  // Exibe ajuda se nenhum argumento for passado
+    arg_required_else_help = true,  // Displays help if no argument is passed
 )]
 struct Cli {
     #[clap(subcommand)]
@@ -34,7 +35,9 @@ enum Commands {
     /// Sove the GC problem.
     GC(problems::gc::args::GcArgs),
     /// Sove the PROT problem.
-    PROT(problems::prot::args::ProtArgs)
+    PROT(problems::prot::args::ProtArgs),
+    /// Sove the Subs problem.
+    SUBS(problems::subs::args::SubsArgs)
 
     // Aqui depois você pode adicionar mais problemas:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -58,6 +61,9 @@ fn main() {
         },
         Commands::PROT(args) => {
             problems::prot::solve::solve(&args);
+        },
+        Commands::SUBS(args) => {
+            problems::subs::solve::solve(&args);
         }
         // Next commands
     }

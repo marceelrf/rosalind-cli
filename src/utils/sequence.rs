@@ -1,6 +1,8 @@
 use std::fs;
 //use std::path::Path;
 use std::collections::HashMap;
+use std::fs::File;
+use std::io::{BufRead, BufReader};
 /// Import a DNA/RNA sequence from a file
 pub fn read_sequence(source: Option<&String>, file: Option<&std::path::PathBuf>) -> String {
     if let Some(seq) = source {
@@ -27,6 +29,16 @@ pub fn validate_rna(seq: &str) {
         eprintln!("Error: Invalid RNA characters detected.");
         std::process::exit(1);
     }
+}
+/// Import the two line file withe the DNA and the pattern
+pub fn read_lines(path: &str) -> Vec<String> {
+    let file = File::open(path).expect("Could not open file.");
+    let reader = BufReader::new(file);
+
+    reader
+        .lines()
+        .map(|line| line.expect("Could not read line"))
+        .collect()
 }
 /// Import a multifasta file into a HashMap
 pub fn read_fasta(path: &str) -> HashMap<String, String> {
@@ -72,4 +84,22 @@ pub fn get_highest_gc(records: &HashMap<String, String>) -> Option<(String, f64)
         .iter()
         .map(|(id, seq)| (id.clone(), gc_percent(seq)))
         .max_by(|a, b| a.1.partial_cmp(&b.1).unwrap()) // compare floats
+}
+/// Find the positions of the substrings
+pub fn find_substring_matches(sequence: &str, pattern: &str) -> Vec<usize> {
+    let mut positions = Vec::new();
+    let seq_len = sequence.len();
+    let pat_len = pattern.len();
+
+    if pat_len > seq_len {
+        return positions;
+    }
+
+    for i in 0..=(seq_len - pat_len) {
+        if &sequence[i..i + pat_len] == pattern {
+            positions.push(i + 1); // 1-based index
+        }
+    }
+
+    positions
 }
