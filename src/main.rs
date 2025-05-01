@@ -40,6 +40,8 @@ enum Commands {
     SUBS(problems::subs::args::SubsArgs),
     /// Counting Point Mutations
     HAMM(problems::hamm::args::HammArgs),
+    /// Rabbits and Recurrence Relations
+    FIB(problems::fib::args::FibArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -69,6 +71,9 @@ fn main() {
         },
         Commands::HAMM(args) => {
             problems::hamm::solve::solve(&args);
+        },
+        Commands::FIB(args) => {
+            problems::fib::solve::solve(&args);
         }
         // Next commands
     }
