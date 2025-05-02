@@ -24,4 +24,4 @@ pub struct FibArgs {
     /// Output file to write results
     #[arg(short = 'w', long)]
     pub writefile: Option<PathBuf>,
-} // /mnt/c/Users/madra/Downloads/
+} 

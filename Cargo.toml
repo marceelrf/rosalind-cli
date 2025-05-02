@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-clap = { version = "4.0", features = ["derive"] }  # Para parsing de argumentos CLI
+clap = { version = "4.0", features = ["derive"] }  # For parsing CLI arguments
 colored = "2"
