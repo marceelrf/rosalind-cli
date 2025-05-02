@@ -42,6 +42,8 @@ enum Commands {
     HAMM(problems::hamm::args::HammArgs),
     /// Rabbits and Recurrence Relations
     FIB(problems::fib::args::FibArgs),
+    /// Mendel's First Law
+    IPRB(problems::iprb::args::IprbArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -74,6 +76,9 @@ fn main() {
         },
         Commands::FIB(args) => {
             problems::fib::solve::solve(&args);
+        },
+        Commands::IPRB(args) => {
+            problems::iprb::solve::solve(&args);
         }
         // Next commands
     }

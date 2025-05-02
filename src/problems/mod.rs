@@ -6,3 +6,4 @@ pub mod prot;
 pub mod subs;
 pub mod hamm;
 pub mod fib;
+pub mod iprb;

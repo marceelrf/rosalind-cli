@@ -59,6 +59,7 @@ src/problems/PROB/
 - [SUBS](https://rosalind.info/problems/subs/)
 - [HAMM](https://rosalind.info/problems/hamm/)
 - [FIB](https://rosalind.info/problems/fib/)
+- [IPRB](https://rosalind.info/problems/iprb/)
 
 ## Get in touch
 
