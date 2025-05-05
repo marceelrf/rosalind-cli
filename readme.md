@@ -61,6 +61,7 @@ src/problems/PROB/
 - [FIB](https://rosalind.info/problems/fib/)
 - [IPRB](https://rosalind.info/problems/iprb/)
 - [IEV](https://rosalind.info/problems/iev/)
+- [FIBD](https://rosalind.info/problems/fibd/)
 
 ## Get in touch
 

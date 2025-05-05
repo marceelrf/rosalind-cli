@@ -45,6 +45,8 @@ enum Commands {
     IPRB(problems::iprb::args::IprbArgs),
     /// Calculating Expected Offspring
     IEV(problems::iev::args::IevArgs),
+    /// Mortal Fibonacci Rabbits
+    FIBD(problems::fibd::args::FibdArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -83,6 +85,9 @@ fn main() {
         },
         Commands::IEV(args) => {
             problems::iev::solve::solve(&args);
+        },
+        Commands::FIBD(args) => {
+            problems::fibd::solve::solve(&args);
         }
         // Next commands
     }

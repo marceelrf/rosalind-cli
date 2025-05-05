@@ -8,3 +8,4 @@ pub mod hamm;
 pub mod fib;
 pub mod iprb;
 pub mod iev;
+pub mod fibd;

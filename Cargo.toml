@@ -6,3 +6,5 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }  # For parsing CLI arguments
 colored = "2"
+num-bigint = "0.4"
+num-traits = "0.2"
