@@ -47,6 +47,8 @@ enum Commands {
     IEV(problems::iev::args::IevArgs),
     /// Mortal Fibonacci Rabbits
     FIBD(problems::fibd::args::FibdArgs),
+    /// Inferring mRNA from Protein
+    MRNA(problems::mrna::args::MrnaArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -88,6 +90,9 @@ fn main() {
         },
         Commands::FIBD(args) => {
             problems::fibd::solve::solve(&args);
+        },
+        Commands::MRNA(args) =>{
+            problems::mrna::solve::solve(&args);
         }
         // Next commands
     }
