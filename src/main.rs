@@ -1,6 +1,5 @@
 use clap::{Parser, Subcommand};
 
-
 mod problems;
 pub mod utils;
 
@@ -44,6 +43,8 @@ enum Commands {
     FIB(problems::fib::args::FibArgs),
     /// Mendel's First Law
     IPRB(problems::iprb::args::IprbArgs),
+    /// Calculating Expected Offspring
+    IEV(problems::iev::args::IevArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -79,6 +80,9 @@ fn main() {
         },
         Commands::IPRB(args) => {
             problems::iprb::solve::solve(&args);
+        },
+        Commands::IEV(args) => {
+            problems::iev::solve::solve(&args);
         }
         // Next commands
     }
