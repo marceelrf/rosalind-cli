@@ -49,6 +49,8 @@ enum Commands {
     FIBD(problems::fibd::args::FibdArgs),
     /// Inferring mRNA from Protein
     MRNA(problems::mrna::args::MrnaArgs),
+    /// Independent Alleles
+    LIA(problems::lia::args::LiaArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -93,6 +95,9 @@ fn main() {
         },
         Commands::MRNA(args) =>{
             problems::mrna::solve::solve(&args);
+        },
+        Commands::LIA(args) => {
+            problems::lia::solve::solve(&args);
         }
         // Next commands
     }
