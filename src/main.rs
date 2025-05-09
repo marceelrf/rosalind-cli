@@ -51,6 +51,8 @@ enum Commands {
     MRNA(problems::mrna::args::MrnaArgs),
     /// Independent Alleles
     LIA(problems::lia::args::LiaArgs),
+    /// Calculating Protein Mass
+    PRTM(problems::prtm::args::PrtmArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -98,6 +100,9 @@ fn main() {
         },
         Commands::LIA(args) => {
             problems::lia::solve::solve(&args);
+        },
+        Commands::PRTM(args) => {
+            problems::prtm::solve::solve(&args);
         }
         // Next commands
     }

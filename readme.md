@@ -64,6 +64,7 @@ src/problems/PROB/
 - [FIBD](https://rosalind.info/problems/fibd/)
 - [MRNA](https://rosalind.info/problems/MRNA/)
 - [LIA](https://rosalind.info/problems/LIA/)
+- [PRTM](https://rosalind.info/problems/PRTM/)
 
 
 ## Get in touch
