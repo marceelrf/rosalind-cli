@@ -65,6 +65,7 @@ src/problems/PROB/
 - [MRNA](https://rosalind.info/problems/MRNA/)
 - [LIA](https://rosalind.info/problems/LIA/)
 - [PRTM](https://rosalind.info/problems/PRTM/)
+- [MPRT](https://rosalind.info/problems/MPRT/)
 
 
 ## Get in touch

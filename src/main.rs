@@ -53,6 +53,8 @@ enum Commands {
     LIA(problems::lia::args::LiaArgs),
     /// Calculating Protein Mass
     PRTM(problems::prtm::args::PrtmArgs),
+    /// Finding a Protein Motif
+    MPRT(problems::mprt::args::MprtArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -103,6 +105,9 @@ fn main() {
         },
         Commands::PRTM(args) => {
             problems::prtm::solve::solve(&args);
+        },
+        Commands::MPRT(args) => {
+            problems::mprt::solve::solve(&args);
         }
         // Next commands
     }

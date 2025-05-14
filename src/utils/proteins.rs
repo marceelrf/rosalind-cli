@@ -36,3 +36,25 @@ pub fn calculate_protein_mass(protein: &str) -> Result<f64, String> {
     
     Ok(protein_mass)
 }
+/// Returns the (1-based) positions where the N-glycosylation motif occurs in the sequence
+pub fn find_nglycosylation_sites(seq: &str) -> Vec<usize> {
+    let seq = seq.as_bytes();
+    let mut positions = Vec::new();
+
+    if seq.len() < 4 {
+        return positions;
+    }
+
+    for i in 0..(seq.len() - 3) {
+        let a = seq[i] as char;
+        let b = seq[i + 1] as char;
+        let c = seq[i + 2] as char;
+        let d = seq[i + 3] as char;
+
+        if a == 'N' && b != 'P' && (c == 'S' || c == 'T') && d != 'P' {
+            positions.push(i + 1); // 1-based
+        }
+    }
+
+    positions
+}
