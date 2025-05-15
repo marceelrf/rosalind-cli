@@ -55,6 +55,8 @@ enum Commands {
     PRTM(problems::prtm::args::PrtmArgs),
     /// Finding a Protein Motif
     MPRT(problems::mprt::args::MprtArgs),
+    /// Finding a Protein Motif
+    SPLC(problems::splc::args::SplcArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -108,6 +110,9 @@ fn main() {
         },
         Commands::MPRT(args) => {
             problems::mprt::solve::solve(&args);
+        },
+        Commands::SPLC(args) => {
+            problems::splc::solve::solve(&args);
         }
         // Next commands
     }

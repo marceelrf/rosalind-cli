@@ -66,6 +66,7 @@ src/problems/PROB/
 - [LIA](https://rosalind.info/problems/LIA/)
 - [PRTM](https://rosalind.info/problems/PRTM/)
 - [MPRT](https://rosalind.info/problems/MPRT/)
+- [SPLC](https://rosalind.info/problems/SPLC/)
 
 
 ## Get in touch

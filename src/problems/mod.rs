@@ -13,3 +13,4 @@ pub mod mrna;
 pub mod lia;
 pub mod prtm;
 pub mod mprt;
+pub mod splc;
