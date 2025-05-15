@@ -118,3 +118,34 @@ pub fn hamming_distance(seq1: &str, seq2: &str) -> Result<usize, &'static str> {
     Ok(dist)
 
 }
+/// Count the bases by position in a multi-fasta set
+pub fn count_bases_by_position(seqs: &HashMap<String, String>) -> Vec<HashMap<char, usize>> {
+    if seqs.is_empty() {
+        panic!("Nenhuma sequência fornecida.");
+    }
+
+    let seq_len = seqs.values().next().unwrap().len();
+
+    let mut position_counts = vec![HashMap::new(); seq_len];
+
+    for seq in seqs.values() {
+        for (i, base) in seq.chars().enumerate() {
+            *position_counts[i].entry(base).or_insert(0) += 1;
+        }
+    }
+
+    position_counts
+}
+/// Get the consensus sequence
+pub fn consensus_sequence(counts: &[HashMap<char, usize>]) -> String {
+    counts
+        .iter()
+        .map(|count_map| {
+            count_map
+                .iter()
+                .max_by_key(|&(_, count)| count)
+                .map(|(&base, _)| base)
+                .unwrap_or('N')
+        })
+        .collect()
+}
