@@ -68,6 +68,7 @@ src/problems/PROB/
 - [MPRT](https://rosalind.info/problems/MPRT/)
 - [SPLC](https://rosalind.info/problems/SPLC/)
 - [CONS](https://rosalind.info/problems/CONS/)
+- [LCSM](https://rosalind.info/problems/LCSM/)
 
 
 ## Get in touch

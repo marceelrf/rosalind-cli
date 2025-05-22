@@ -59,6 +59,8 @@ enum Commands {
     SPLC(problems::splc::args::SplcArgs),
     /// Consensus and Profile
     CONS(problems::cons::args::ConsArgs),
+    /// Finding a Shared Motif 
+    LCSM(problems::lcsm::args::LcsmArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -118,6 +120,9 @@ fn main() {
         },
         Commands::CONS(args) => {
             problems::cons::solve::solve(&args);
+        },
+         Commands::LCSM(args) => {
+            problems::lcsm::solve::solve(&args);
         }
         // Next commands
     }
