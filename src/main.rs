@@ -16,6 +16,13 @@ pub mod utils;
 
     https://github.com/marceelrf/rosalind-cli
     "#,
+    before_help = concat!(r#"    ____                   ___           __"#, "\n",
+                          r#"   / __ \____  _________ _/ (_)___  ____/ /"#, "\n",
+                          r#"  / /_/ / __ \/ ___/ __ `/ / / __ \/ __  / "#, "\n",
+                          r#" / _, _/ /_/ (__  ) /_/ / / / / / / /_/ /  "#, "\n",
+                          r#"/_/ |_|\____/____/\__,_/_/_/_/ /_/\__,_/   "#, "\n",
+                          r#"                                           "#, "\n",
+                          r#"                               by marceelrf "#, "\n"),
     arg_required_else_help = true,  // Displays help if no argument is passed
 )]
 struct Cli {
