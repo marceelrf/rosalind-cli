@@ -149,3 +149,7 @@ pub fn consensus_sequence(counts: &[HashMap<char, usize>]) -> String {
         })
         .collect()
 }
+/// Checks if the suffix of one string matches the prefix of another, given an overlap size of k.
+pub fn has_overlap(s1: &str, s2: &str, k: usize) -> bool {
+    s1.ends_with(&s2[..k])
+}

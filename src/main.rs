@@ -61,6 +61,8 @@ enum Commands {
     CONS(problems::cons::args::ConsArgs),
     /// Finding a Shared Motif 
     LCSM(problems::lcsm::args::LcsmArgs),
+    /// Overlap Graphs
+    GRPH(problems::grph::args::GrphArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -123,6 +125,9 @@ fn main() {
         },
          Commands::LCSM(args) => {
             problems::lcsm::solve::solve(&args);
+        },
+         Commands::GRPH(args) => {
+            problems::grph::solve::solve(&args);
         }
         // Next commands
     }
