@@ -24,6 +24,7 @@ pub mod utils;
                           r#"                                           "#, "\n",
                           r#"                               by marceelrf "#, "\n"),
     arg_required_else_help = true,  // Displays help if no argument is passed
+    subcommand_required = false 
 )]
 struct Cli {
     #[clap(subcommand)]
@@ -70,6 +71,8 @@ enum Commands {
     LCSM(problems::lcsm::args::LcsmArgs),
     /// Overlap Graphs
     GRPH(problems::grph::args::GrphArgs),
+    /// Enumerating Gene Orders
+    PERM(problems::perm::args::PermArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -135,6 +138,9 @@ fn main() {
         },
          Commands::GRPH(args) => {
             problems::grph::solve::solve(&args);
+        },
+         Commands::PERM(args) => {
+            problems::perm::solve::solve(&args);
         }
         // Next commands
     }

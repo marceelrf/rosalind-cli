@@ -17,3 +17,4 @@ pub mod splc;
 pub mod cons;
 pub mod lcsm;
 pub mod grph;
+pub mod perm;
