@@ -73,6 +73,8 @@ enum Commands {
     GRPH(problems::grph::args::GrphArgs),
     /// Enumerating Gene Orders
     PERM(problems::perm::args::PermArgs),
+    /// Locating Restriction Sites
+    REVP(problems::revp::args::RevpArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -141,6 +143,9 @@ fn main() {
         },
          Commands::PERM(args) => {
             problems::perm::solve::solve(&args);
+        },
+         Commands::REVP(args) => {
+            problems::revp::solve::solve(&args);
         }
         // Next commands
     }

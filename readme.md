@@ -79,6 +79,7 @@ src/problems/PROB/
 - [LCSM](https://rosalind.info/problems/LCSM/)
 - [GRPH](https://rosalind.info/problems/GRPH/)
 - [PERM](https://rosalind.info/problems/PERM/)
+- [REVP](https://rosalind.info/problems/REVP/)
 
 
 ## Get in touch

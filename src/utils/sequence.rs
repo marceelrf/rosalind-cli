@@ -153,3 +153,36 @@ pub fn consensus_sequence(counts: &[HashMap<char, usize>]) -> String {
 pub fn has_overlap(s1: &str, s2: &str, k: usize) -> bool {
     s1.ends_with(&s2[..k])
 }
+/// Returns the reverse complement of a DNA sequence
+pub fn reverse_complement(dna: &str) -> String {
+    
+    validate_dna(dna);
+    
+    dna.chars()
+        .rev()
+        .map(|base| match base {
+            'A' => 'T',
+            'T' => 'A',
+            'C' => 'G',
+            'G' => 'C',
+            _ => base, // ou panic!("Invalid DNA base: {}", base)
+        })
+        .collect()
+}
+/// Find the reverse palindromes (From 4 to 12 bases).
+pub fn find_reverse_palindromes(seq: &str) -> Vec<(usize, usize)> {
+    let mut results = Vec::new();
+
+    for i in 0..seq.len() {
+        for len in 4..=12 {
+            if i + len <= seq.len() {
+                let subseq = &seq[i..i + len];
+                if subseq == reverse_complement(subseq) {
+                    results.push((i + 1, len)); // posição 1-based
+                }
+            }
+        }
+    }
+
+    results
+}
