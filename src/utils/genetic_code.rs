@@ -83,4 +83,34 @@ pub fn print_colored_protein(protein: &str) {
     }
     println!();
 }
+/// Find ORFs from a DNA sequence
+pub fn find_orfs(seq: &str, codon_table: &HashMap<&str, &str>) -> Vec<String> {
+    let mut proteins = Vec::new();
 
+    for frame in 0..3 {
+        let chars: Vec<char> = seq.chars().collect();
+        let mut i = frame;
+        while i + 3 <= chars.len() {
+            let codon: String = chars[i..i + 3].iter().collect();
+            if codon_table.get(&codon[..]).copied() == Some("M") {
+                let mut protein = String::new();
+                let mut j = i;
+                while j + 3 <= chars.len() {
+                    let codon: String = chars[j..j + 3].iter().collect();
+                    let aa = codon_table.get(&codon[..]).copied().unwrap_or("X");
+                    if aa == "*" {
+                        protein.push_str("*");
+                        proteins.push(protein.trim_end_matches('*').to_string());
+                        break;
+                    } else {
+                        protein.push_str(aa);
+                    }
+                    j += 3;
+                }
+            }
+            i += 3;
+        }
+    }
+
+    proteins
+}

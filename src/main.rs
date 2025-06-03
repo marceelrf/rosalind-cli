@@ -75,6 +75,8 @@ enum Commands {
     PERM(problems::perm::args::PermArgs),
     /// Locating Restriction Sites
     REVP(problems::revp::args::RevpArgs),
+    /// Open Reading Frames
+    ORF(problems::orf::args::OrfArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -146,6 +148,9 @@ fn main() {
         },
          Commands::REVP(args) => {
             problems::revp::solve::solve(&args);
+        },
+         Commands::ORF(args) => {
+            problems::orf::solve::solve(&args);
         }
         // Next commands
     }

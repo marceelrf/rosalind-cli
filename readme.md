@@ -80,7 +80,7 @@ src/problems/PROB/
 - [GRPH](https://rosalind.info/problems/GRPH/)
 - [PERM](https://rosalind.info/problems/PERM/)
 - [REVP](https://rosalind.info/problems/REVP/)
-
+- [ORF](https://rosalind.info/problems/ORF/)
 
 ## Get in touch
 
