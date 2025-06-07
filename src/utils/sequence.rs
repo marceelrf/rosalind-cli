@@ -186,3 +186,18 @@ pub fn find_reverse_palindromes(seq: &str) -> Vec<(usize, usize)> {
 
     results
 }
+/// Count the RNA bases.
+pub fn count_rna_bases(seq: &str) -> HashMap<char, usize> {
+    let mut counts = HashMap::new();
+
+    for base in seq.chars() {
+        match base {
+            'A' | 'U' | 'C' | 'G' => {
+                *counts.entry(base).or_insert(0) += 1;
+            }
+            _ => panic!("Invalid RNA base: {}", base),
+        }
+    }
+
+    counts
+}

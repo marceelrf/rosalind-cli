@@ -81,6 +81,7 @@ src/problems/PROB/
 - [PERM](https://rosalind.info/problems/PERM/)
 - [REVP](https://rosalind.info/problems/REVP/)
 - [ORF](https://rosalind.info/problems/ORF/)
+- [PMCH](https://rosalind.info/problems/PMCH/)
 
 ## Get in touch
 

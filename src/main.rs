@@ -77,6 +77,8 @@ enum Commands {
     REVP(problems::revp::args::RevpArgs),
     /// Open Reading Frames
     ORF(problems::orf::args::OrfArgs),
+    /// Perfect Matchings and RNA Secondary Structures
+    PMCH(problems::pmch::args::PmchArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -151,6 +153,9 @@ fn main() {
         },
          Commands::ORF(args) => {
             problems::orf::solve::solve(&args);
+        },
+         Commands::PMCH(args) => {
+            problems::pmch::solve::solve(&args);
         }
         // Next commands
     }
