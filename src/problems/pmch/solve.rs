@@ -37,7 +37,7 @@ pub fn solve(args: &PmchArgs) {
     let result = factorial(a as u128) * factorial(c as u128);
 
     if args.printresult {
-        print!("{}", result);
+        print!("{}\n", result);
     }
 
     // Save to file if specified
