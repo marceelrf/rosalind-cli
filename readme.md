@@ -82,6 +82,7 @@ src/problems/PROB/
 - [REVP](https://rosalind.info/problems/REVP/)
 - [ORF](https://rosalind.info/problems/ORF/)
 - [PMCH](https://rosalind.info/problems/PMCH/)
+- [LEXF](https://rosalind.info/problems/LEXF/)
 
 ## Get in touch
 

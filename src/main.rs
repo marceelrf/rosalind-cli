@@ -79,6 +79,8 @@ enum Commands {
     ORF(problems::orf::args::OrfArgs),
     /// Perfect Matchings and RNA Secondary Structures
     PMCH(problems::pmch::args::PmchArgs),
+    /// Enumerating k-mers Lexicographically
+    LEXF(problems::lexf::args::LexfArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -156,6 +158,9 @@ fn main() {
         },
          Commands::PMCH(args) => {
             problems::pmch::solve::solve(&args);
+        },
+        Commands::LEXF(args) => {
+            problems::lexf::solve::solve(&args);
         }
         // Next commands
     }
