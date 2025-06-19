@@ -81,6 +81,8 @@ enum Commands {
     PMCH(problems::pmch::args::PmchArgs),
     /// Enumerating k-mers Lexicographically
     LEXF(problems::lexf::args::LexfArgs),
+    /// Introduction to Random Strings
+    PROB(problems::prob::args::ProbArgs),
 
     // Here you can then add more problems:
     // Prob2(problems::prob2::args::Prob2Args),
@@ -161,6 +163,9 @@ fn main() {
         },
         Commands::LEXF(args) => {
             problems::lexf::solve::solve(&args);
+        },
+        Commands::PROB(args) => {
+            problems::prob::solve::solve(&args);
         }
         // Next commands
     }

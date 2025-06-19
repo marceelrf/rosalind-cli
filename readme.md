@@ -83,6 +83,7 @@ src/problems/PROB/
 - [ORF](https://rosalind.info/problems/ORF/)
 - [PMCH](https://rosalind.info/problems/PMCH/)
 - [LEXF](https://rosalind.info/problems/LEXF/)
+- [PROB](https://rosalind.info/problems/PROB/)
 
 ## Get in touch
 
